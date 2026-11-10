@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="FandomVerse - Anime, Gaming, Movies, Comics, K-Pop and TV Shows community hub.">
+<title>FandomVerse - Ultimate Fandom Ecosystem</title>
+<link rel="shortcut icon" href="logo.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg navbar-dark glass-navbar fixed-top px-3 py-3">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center gap-3 text-decoration-none ps-4" href="#home">
+      <div class="position-relative d-flex align-items-center justify-content-center" style="width: 44px; height: 44px; background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(236, 72, 153, 0.15)); border: 1.5px solid rgba(168, 85, 247, 0.6); border-radius: 12px; box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), inset 0 0 10px rgba(168, 85, 247, 0.2);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 0 6px rgba(236, 72, 153, 0.8));">
+          <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="url(#eliteGrad)" stroke="#ffffff" stroke-width="0.5" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="eliteGrad" x1="3" y1="2" x2="21" y2="22" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#c084fc"/>
+              <stop offset="0.5" stop-color="#ec4899"/>
+              <stop offset="1" stop-color="#60a5fa"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="d-flex flex-column">
+        <span style="font-size: 1.35rem; font-weight: 800; background: linear-gradient(135deg, #ffffff 30%, #e879f9 70%, #60a5fa 100%); background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 0.5px; line-height: 1.2;">
+          FANDOM<span style="background: linear-gradient(135deg, #ec4899, #f43f5e); background-clip: text; -webkit-text-fill-color: transparent;">VERSE</span>
+        </span>
+        <span class="text-uppercase" style="font-size: 0.5rem; letter-spacing: 2.5px; color: #94a3b8; font-weight: 600;">Ultimate Hub</span>
+      </div>
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2 me-lg-3 align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link active d-flex align-items-center gap-1 px-2 py-1" href="#home"><i class="fa-solid fa-home" style="color: #e879f9;"></i> Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle px-2 py-1" href="#" role="button" data-bs-toggle="dropdown">Categories</a>
+          <ul class="dropdown-menu dropdown-menu-dark-custom">
+            <li><a class="dropdown-item" href="#characters" onclick="filterCharactersByCategory('Anime')">Anime</a></li>
+            <li><a class="dropdown-item" href="#characters" onclick="filterCharactersByCategory('Gaming')">Gaming</a></li>
+            <li><a class="dropdown-item" href="#characters" onclick="filterCharactersByCategory('Movies')">Movies</a></li>
+            <li><a class="dropdown-item" href="#characters" onclick="filterCharactersByCategory('Comics')">Comics</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link px-2 py-1" href="#media">Media Hub</a></li>
+        <li class="nav-item"><a class="nav-link px-2 py-1" href="#merch">Merchandise</a></li>
+        <li class="nav-item"><a class="nav-link px-2 py-1" href="#bookmarks">Bookmarks</a></li>
+        <li class="nav-item">
+          <a class="nav-link px-2 py-1" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas">
+            <i class="fa-solid fa-cart-shopping me-1" style="color: #e879f9;"></i> Cart
+            <span class="cart-badge" id="cartCountBadge" style="display:none;">0</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-3 my-2 my-lg-0">
+        <div class="search-box-wrapper">
+          <i class="fa-solid fa-search text-muted me-2"></i>
+          <input type="text" placeholder="Search hubs...">
+        </div>
+        <button class="btn btn-outline-custom btn-sm text-nowrap py-2 px-3" data-bs-toggle="modal" data-bs-target="#signInModal">
+          Sign In
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Cart Side Bar -->
+<div class="offcanvas offcanvas-end custom-cart-drawer" tabindex="-1" id="cartCanvas">
+  <div class="offcanvas-header border-bottom border-custom">
+    <h5 class="offcanvas-title d-flex align-items-center gap-2">
+      <i class="fa-solid fa-cart-shopping" style="color: #c084fc;"></i> Your Cart
+    </h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="text-center py-5" id="cartEmptyState">
+      <i class="fa-solid fa-cart-arrow-down fa-3x mb-3" style="color: #a855f7; opacity: 0.6;"></i>
+      <p class="text-white-50 mb-0">Your cart is empty.</p>
+      <small class="text-muted">Explore merch and add items here!</small>
+    </div>
+    <div class="cart-items-list" id="cartItemsContainer"></div>
+  </div>
+  <div class="offcanvas-footer p-3 border-top border-custom">
+    <div class="d-flex justify-content-between mb-3">
+      <span class="text-muted">Total:</span>
+      <span class="fw-bold text-white" id="cartTotalPrice">$0.00</span>
+    </div>
+    <button class="btn btn-neon-purple w-100 mb-2 py-2" id="checkoutBtn" style="font-size: 0.9rem;">Proceed to Checkout</button>
+    <button class="btn btn-outline-custom w-100 py-2" data-bs-dismiss="offcanvas" style="font-size: 0.9rem;">Continue Shopping</button>
+  </div>
+</div>
+
+<!-- ========== HOME / HERO ========== -->
+<section class="hero-section" id="home">
+  <div class="container position-relative" style="z-index: 2;">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <div class="badge bg-purple bg-opacity-10 text-purple border border-purple border-opacity-25 px-3 py-2 rounded-pill mb-3 fw-semibold" style="color: #c084fc; border-color: rgba(168,85,247,0.3);">
+          <i class="fa-solid fa-bolt text-warning me-1"></i> ULTIMATE FANDOM HUB
+        </div>
+        <h1 class="hero-title mb-3">
+          ENTER THE <br><span>FANDOMVERSE</span>
+        </h1>
+        <p class="text-white-50 fs-5 mb-4">
+          Explore Anime, Gaming, Movies, Comics, K-Pop, and TV Shows in one dark neon ecosystem.
+        </p>
+
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <a href="#categories" class="category-pill"><i class="fa-solid fa-tv text-danger"></i> Anime</a>
+          <a href="#categories" class="category-pill"><i class="fa-solid fa-gamepad text-primary"></i> Gaming</a>
+          <a href="#categories" class="category-pill"><i class="fa-solid fa-film text-warning"></i> Movies</a>
+          <a href="#categories" class="category-pill"><i class="fa-solid fa-tv text-success"></i> TV Shows</a>
+          <a href="#categories" class="category-pill"><i class="fa-solid fa-music text-info"></i> K-Pop</a>
+          <a href="#categories" class="category-pill"><i class="fa-solid fa-book-open" style="color: yellow;"></i> Manga</a>
+          <a href="#categories" class="category-pill"><i class="fa-solid fa-book" style="color: #c084fc;"></i> Comics</a>
+        </div>
+
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#categories" class="btn btn-neon-purple"><i class="fa-solid fa-compass me-2"></i> Explore Hubs</a>
+          <a href="#merch" class="btn btn-outline-custom"><i class="fa-solid fa-cart-shopping me-2" style="color: #e879f9;"></i> Shop Merch</a>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="hero-clean-frame">
+          <div class="ratio ratio-16x9 rounded-3 overflow-hidden bg-dark">
+            <img src="assets/hero/rightside.jpg" alt="Fandom Preview" class="w-100 h-100 object-fit-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sparkles-container">
+    <div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div>
+    <div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div>
+    <div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div><div class="sparkle"></div>
+    <div class="sparkle"></div>
+  </div>
+</section>
+
+<!-- ========== FANDOM HUBS (7 category cards) ========== -->
+<section class="categories-section" id="categories">
+  <div class="categories-header">
+    <div class="categories-header-text">
+      <h2>Browse by Category</h2>
+      <p>Seven worlds, one ecosystem — pick where you want to dive in.</p>
+    </div>
+    <button id="hubsViewAllBtn" class="view-all-btn" type="button" onclick="toggleHubCategories()" aria-expanded="false">
+      <span id="hubsViewAllText">View All</span> <i id="hubsViewAllArrow" class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+  <div class="hub-grid" id="fandomHubGrid"></div>
+</section>
+
+<div class="hub-modal" id="hubModal" aria-hidden="true">
+  <div class="hub-modal-backdrop" onclick="closeHubModal()"></div>
+  <div class="hub-modal-box" role="dialog" aria-modal="true" aria-labelledby="hubModalTitle">
+    <button class="hub-modal-close" type="button" onclick="closeHubModal()" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <img id="hubModalImg" src="" alt="">
+    <div class="hub-modal-copy">
+      <span id="hubModalChar" class="hub-pill"></span>
+      <h2 id="hubModalTitle"></h2>
+      <p id="hubModalDesc"></p>
+      <div id="hubModalReadArea"></div>
+    </div>
+  </div>
+</div>
+
+<div class="hub-modal hub-reader-modal" id="hubReaderModal" aria-hidden="true">
+  <div class="hub-modal-backdrop" onclick="closeHubReaderModal()"></div>
+  <div class="hub-reader-box" role="dialog" aria-modal="true" aria-labelledby="hubReaderTitle">
+    <div class="hub-reader-topbar">
+      <div>
+        <span id="hubReaderSubtitle" class="hub-reader-type"></span>
+        <h2 id="hubReaderTitle">Book Reader</h2>
+      </div>
+      <button class="hub-modal-close" type="button" onclick="closeHubReaderModal()" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="hub-reader-layout">
+      <aside class="hub-reader-sidebar">
+        <div class="hub-reader-cover-wrap"><img id="hubReaderCover" src="" alt="Book cover"></div>
+        <div class="hub-reader-meta"><span id="hubReaderBookType"></span><strong id="hubReaderPageCount"></strong></div>
+        <p id="hubReaderNote"></p>
+        <div class="hub-thumbnail-strip" id="hubThumbnailStrip"></div>
+      </aside>
+      <section class="hub-reader-stage">
+        <div class="hub-reader-page-shell">
+          <img id="hubReaderImg" class="hub-reader-page-img" src="" alt="Comic or manga page">
+          <div id="hubReaderEmpty" class="hub-reader-empty" hidden>
+            <i class="fa-solid fa-book-open"></i>
+            <h3>Cover preview</h3>
+            <p>Interior pages for this title were not included in the supplied project assets yet.</p>
+          </div>
+        </div>
+        <div class="hub-reader-controls">
+          <button id="hubPrevPageBtn" class="hub-reader-btn" type="button" onclick="changeHubReaderPage(-1)"><i class="fa-solid fa-chevron-left"></i> Previous</button>
+          <div class="hub-page-count" id="hubPageIndicator">Page 1 / 1</div>
+          <button id="hubNextPageBtn" class="hub-reader-btn primary" type="button" onclick="changeHubReaderPage(1)">Next <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- ========== MERCHANDISE STORE ========== -->
+<section id="merch">
+  <div class="container-fluid merch-container">
+    <div class="merch-head">
+      <h2 class="merch-section-title">Merch Store</h2>
+      <button class="view-all-btn" id="viewAllBtn" onclick="toggleMerchViewAll()">View All</button>
+    </div>
+    <div class="row g-3 merch-grid" id="merchGrid"></div>
+  </div>
+</section>
+
+<!-- ========== CHARACTERS ========== -->
+<section class="characters-page" id="characters">
+  <div class="container">
+    <header class="char-page-header">
+      <h2>Characters</h2>
+    </header>
+
+    <nav class="char-filters" id="category-filters" aria-label="Character categories">
+      <button class="char-filter-btn active" data-category="all">All</button>
+      <button class="char-filter-btn" data-category="Anime">Anime</button>
+      <button class="char-filter-btn" data-category="Gaming">Gaming</button>
+      <button class="char-filter-btn" data-category="Movies">Movies</button>
+      <button class="char-filter-btn" data-category="TV Shows">TV Shows</button>
+      <button class="char-filter-btn" data-category="K-Pop">K-Pop</button>
+      <button class="char-filter-btn" data-category="Comics">Comics</button>
+      <button class="char-filter-btn" data-category="Manga">Manga</button>
+    </nav>
+
+    <section class="carousel" id="character-carousel" aria-label="Characters">
+      <button class="carousel-arrow carousel-prev" id="prev-btn" type="button" aria-label="Previous characters">&#10094;</button>
+      <div class="carousel-window">
+        <div id="characters-grid" class="characters-grid" aria-live="polite">
+          <p class="status-message">Loading characters...</p>
+        </div>
+      </div>
+      <button class="carousel-arrow carousel-next" id="next-btn" type="button" aria-label="Next characters">&#10095;</button>
+    </section>
+  </div>
+</section>
+
+<div class="character-modal" id="character-modal" aria-hidden="true">
+  <div class="char-modal-backdrop" data-close-modal></div>
+  <div class="char-modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+    <button class="char-modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div class="char-modal-content">
+      <div class="char-modal-image-wrap"><img id="modal-image" src="" alt=""></div>
+      <div class="char-modal-details">
+        <span class="char-modal-category" id="modal-category">Category</span>
+        <h2 id="modal-name">Character</h2>
+        <p class="char-modal-series" id="modal-series">Series</p>
+        <p class="char-modal-bio" id="modal-bio"></p>
+        <h3>Key Traits</h3>
+        <div class="char-traits" id="modal-traits"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== MEDIA SECTION ========== -->
+<section class="media-hub-section" id="media">
+  <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+    <div>
+      <h2 class="media-section-title mb-1"><i class="fa-solid fa-photo-film me-2"></i> Media Hub</h2>
+      <p class="media-sub-heading small mb-0">Trailers, Podcasts &amp; Fan Creations across all 7 Categories</p>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+      <label class="media-sub-heading small">Category:</label>
+      <select id="categorySelect" class="form-select form-select-sm form-select-theme" style="width:auto;">
+        <option value="All">All Categories (7)</option>
+        <option value="Anime">Anime</option>
+        <option value="Gaming">Gaming</option>
+        <option value="Movies">Movies</option>
+        <option value="TV Shows">TV Shows</option>
+        <option value="K-Pop">K-Pop</option>
+        <option value="Comics">Comics</option>
+        <option value="Manga">Manga</option>
+      </select>
+    </div>
+  </div>
+  <div class="d-flex flex-wrap gap-2 mb-4" id="typeFilterGroup">
+    <button class="media-filter-btn active" data-type="all">All Content</button>
+    <button class="media-filter-btn" data-type="trailers"><i class="fa-solid fa-film me-1"></i> Trailers</button>
+    <button class="media-filter-btn" data-type="fan-content"><i class="fa-solid fa-wand-magic-sparkles me-1"></i> Fan Creations</button>
+    <button class="media-filter-btn" data-type="podcasts"><i class="fa-solid fa-podcast me-1"></i> Podcasts / Audio</button>
+  </div>
+  <div class="media-hub-wrapper">
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div id="videoDisplayBlock">
+          <div class="video-container">
+            <iframe id="mainYoutubePlayer" src="" title="Media player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div id="audioDisplayBlock" class="audio-player-card">
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <i class="fa-solid fa-podcast fs-1" style="color:var(--neon-pink);"></i>
+            <div>
+              <h5 id="audioTrackTitle" class="fw-bold mb-0">Audio Track</h5>
+              <span id="audioTrackCat" class="badge badge-brand extra-small">Podcast Episode</span>
+            </div>
+          </div>
+          <audio id="mainAudioPlayer" controls style="width:100%;"></audio>
+        </div>
+        <div class="mt-3">
+          <div class="d-flex justify-content-between align-items-start">
+            <h4 id="activeTitle" class="fw-bold text-light mb-1">Media Title</h4>
+            <span id="activeBadge" class="badge badge-brand">Category</span>
+          </div>
+          <p id="activeDesc" class="media-sub-heading small mt-2">Select an item from the playlist.</p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="media-sub-heading fw-bold text-uppercase mb-3"><i class="fa-solid fa-list me-2"></i> Playlist</h6>
+        <div class="playlist-scroll" id="playlistContainer"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LATEST ARTICLES ========== -->
+<section class="article-section" id="articles">
+  <div id="articles-wrapper">
+    <div class="article-header-container">
+      <h2 class="article-section-title">Latest Articles</h2>
+    </div>
+
+    <div class="articles-grid">
+      <article class="article-card" data-article-id="1">
+        <div class="article-thumb">
+          <img src="assets/article/img12.jpeg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&q=80';" alt="Anime Article" loading="lazy">
+          <span class="thumb-tag">FANDOMVERSE · VISUAL</span>
+          <button class="bookmark-btn" onclick="toggleBookmark(1, this)" aria-label="Bookmark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+          </button>
+        </div>
+        <div class="article-body">
+          <div class="article-meta"><span class="article-pill">Anime</span><span class="article-pill">Article</span></div>
+          <h3>Voice Cast Confirmed for Season Three</h3>
+          <p>The returning cast list quietly answers the question fans have been asking since the finale.</p>
+          <a class="read-link" onclick="openArticle(1)">Read article</a>
+        </div>
+      </article>
+
+      <article class="article-card" data-article-id="2">
+        <div class="article-thumb">
+          <img src="assets/article/img13.jpeg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=80';" alt="Gaming Article" loading="lazy">
+          <span class="thumb-tag">FANDOMVERSE · VISUAL</span>
+          <button class="bookmark-btn" onclick="toggleBookmark(2, this)" aria-label="Bookmark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+          </button>
+        </div>
+        <div class="article-body">
+          <div class="article-meta"><span class="article-pill">Gaming</span><span class="article-pill">Article</span></div>
+          <h3>Patch 4.2 Reworks the Ranked Ladder</h3>
+          <p>A breakdown of what changes for climbers, and which characters lose their edge.</p>
+          <a class="read-link" onclick="openArticle(2)">Read article</a>
+        </div>
+      </article>
+
+      <article class="article-card" data-article-id="3">
+        <div class="article-thumb">
+          <img src="assets/article/img14.jpeg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=800&q=80';" alt="Comics Article" loading="lazy">
+          <span class="thumb-tag">FANDOMVERSE · VISUAL</span>
+          <button class="bookmark-btn" onclick="toggleBookmark(3, this)" aria-label="Bookmark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+          </button>
+        </div>
+        <div class="article-body">
+          <div class="article-meta"><span class="article-pill">Comics</span><span class="article-pill">Article</span></div>
+          <h3>Behind the Cover: Sketch to Print</h3>
+          <p>The artist walks through three discarded drafts before landing on the final composition.</p>
+          <a class="read-link" onclick="openArticle(3)">Read article</a>
+        </div>
+      </article>
+
+      <article class="article-card" data-article-id="4">
+        <div class="article-thumb">
+          <img src="assets/article/img15.jpeg" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80';" alt="Movies Article" loading="lazy">
+          <span class="thumb-tag">FANDOMVERSE · VISUAL</span>
+          <button class="bookmark-btn" onclick="toggleBookmark(4, this)" aria-label="Bookmark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+          </button>
+        </div>
+        <div class="article-body">
+          <div class="article-meta"><span class="article-pill">Movies</span><span class="article-pill">Article</span></div>
+          <h3>The Deleted Scene That Explains Everything</h3>
+          <p>A ten-second cut clears up the plot hole the fandom has argued about for months.</p>
+          <a class="read-link" onclick="openArticle(4)">Read article</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="article-modal-overlay" id="articleModal" onclick="closeArticleOnBg(event)">
+  <div class="article-modal-content">
+    <button class="article-close-modal-btn" onclick="closeArticle()">&times;</button>
+    <div class="article-modal-meta" id="modalMeta"></div>
+    <h2 class="article-modal-title" id="modalTitle"></h2>
+    <div class="article-modal-body-text" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ========== BOOKMARKS ========== -->
+<section class="article-section" id="bookmarks">
+  <div id="bookmarks-wrapper">
+    <div class="article-header-container">
+      <h2 class="article-section-title">Your Bookmarks</h2>
+      <p class="bookmarks-subtitle">Articles you saved for later show up right here.</p>
+    </div>
+
+    <div class="articles-grid" id="bookmarksGrid"></div>
+    <div class="bookmarks-empty" id="bookmarksEmpty">
+      <i class="fa-regular fa-bookmark"></i>
+      <p>No bookmarks yet — tap the bookmark icon on any article to save it here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EVENTS HIGHLIGHTS ========== -->
+<section class="events-section" id="events">
+  <div class="container">
+    <div class="section-heading">
+      <div class="heading-icon"><i class="fa-solid fa-fire"></i></div>
+      <div>
+        <h2>EVENT HIGHLIGHTS</h2>
+        <p>Upcoming events in the FandomVerse</p>
+      </div>
+    </div>
+    <div class="events-grid row g-4" id="eventsGrid"></div>
+  </div>
+</section>
+
+<section class="news-ticker-section">
+  <div class="container">
+    <div class="ticker-wrapper">
+      <div class="ticker-label"><i class="fa-solid fa-circle"></i> UPDATE</div>
+      <div class="ticker-content">
+        <div class="ticker-text">
+          <strong>K-Pop:</strong> K-Pop &amp; Media Festival is coming this December.
+          <strong>Anime:</strong> FandomVerse Anime Night is coming this October.
+          <strong>Gaming:</strong> Gaming Arena Tournament is coming this November.
+        </div>
+      </div>
+      <div class="datetime-wrapper">
+        <div class="datetime-box">
+          <i class="fa-regular fa-calendar-days"></i>
+          <span id="liveDate">00/00/0000</span>
+        </div>
+        <div class="datetime-box time-box">
+          <i class="fa-regular fa-clock"></i>
+          <span id="liveClock">00:00:00 AM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="event-modal" id="eventModal">
+  <div class="event-modal-box">
+    <img class="event-modal-image" id="modalImage" src="" alt="Event image">
+    <div class="event-modal-top">
+      <h2 id="modalTitle2">Event Details</h2>
+      <button class="event-modal-close" onclick="closeEvent()">×</button>
+    </div>
+    <div class="event-modal-content">
+      <div class="event-modal-info">
+        <div class="event-modal-info-item"><strong>Date</strong><span id="modalDate"></span></div>
+        <div class="event-modal-info-item"><strong>Location</strong><span id="modalLocation"></span></div>
+        <div class="event-modal-info-item"><strong>Category</strong><span id="modalCategory"></span></div>
+      </div>
+      <p class="event-modal-description" id="modalDescription"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ========== ABOUT US ========== -->
+<section class="about-section" id="about">
+  <div class="about-container">
+    <div class="text-center mb-4">
+      <div class="badge about-badge px-3 py-2 rounded-pill mb-2 fw-semibold" style="font-size: 0.75rem; letter-spacing: 1px;">
+        <i class="fa-solid fa-shield-halved me-1" style="color: var(--neon-pink);"></i> WHO WE ARE
+      </div>
+      <h2 class="fw-bold mb-1" style="font-size: 2rem;">
+        About <span class="about-gradient-text">FandomVerse</span>
+      </h2>
+      <p class="text-secondary small mx-auto mb-0" style="max-width: 500px; font-size: 0.82rem; color: var(--text-muted);">
+        The ultimate universe for anime, gaming, and pop-culture lovers.
+      </p>
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col-md-6">
+        <div class="about-custom-card p-3 p-md-4 h-100 d-flex flex-column justify-content-center">
+          <h5 class="text-white mb-2 d-flex align-items-center" style="font-size: 1rem;">
+            <i class="fa-solid fa-rocket me-2" style="color: var(--neon-pink);"></i> Our Mission
+          </h5>
+          <p class="mb-0" style="font-size: 0.82rem; line-height: 1.6; color: var(--text-muted);">
+            To unite global fandoms with real-time updates and immersive community spaces built for geek culture.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="about-custom-card p-3 p-md-4 h-100 d-flex flex-column justify-content-center">
+          <h5 class="text-white mb-2 d-flex align-items-center" style="font-size: 1rem;">
+            <i class="fa-solid fa-eye me-2" style="color: var(--neon-purple);"></i> Our Vision
+          </h5>
+          <p class="mb-0" style="font-size: 0.82rem; line-height: 1.6; color: var(--text-muted);">
+            To become the definitive digital home and cross-universe hub for anime fans and gamers worldwide.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="about-custom-card p-3 p-md-4 text-center">
+      <h5 class="text-white mb-2" style="font-size: 1.05rem;">
+        Powered By <span class="about-gradient-text">Cyber Squad Crew</span>
+      </h5>
+      <p class="text-muted mb-0 mx-auto" style="font-size: 0.8rem; line-height: 1.5; max-width: 650px; color: var(--text-muted) !important;">
+        A dedicated team of creators and developers crafting an interactive, high-performance ecosystem for the ultimate geek experience.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="fandom-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-column">
+        <div class="footer-logo">Fandom<span>Verse</span></div>
+        <p class="footer-description">Your ultimate fandom hub for Anime, Gaming, Movies, K-Pop, Comics and TV Shows.</p>
+        <div class="visitor-counter">
+          <span><i class="fa-solid fa-eye"></i></span>
+          Total Visitors:
+          <strong id="visitorCount">0</strong>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#media">Media Hub</a></li>
+          <li><a href="#merch">Merch</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p class="footer-description">Connect with the FandomVerse community near you.</p>
+        <div class="contact-item"><span><i class="fa-solid fa-envelope"></i></span> info@fandomverse.com</div>
+        <div class="contact-item"><span><i class="fa-solid fa-phone"></i></span> +92 300 1234567</div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Branch Location</h3>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps?q=Latifabad+Unit+2+Hyderabad+Sindh+Pakistan&output=embed" loading="lazy" title="Latifabad Branch Location"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 FandomVerse</div>
+      <div>All Rights Reserved.</div>
+      <div>Fandom Community Hub</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Sign In Modal -->
+<div class="modal fade" id="signInModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background: var(--bg-dropdown); border: 1px solid var(--border-custom); color: var(--text-main);">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" style="font-family: var(--font-heading);">Sign In to FandomVerse</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label class="form-label text-muted small">Email address</label>
+          <input type="email" class="form-control" style="background: var(--bg-main); color: #fff; border-color: var(--border-custom);" placeholder="you@example.com">
+        </div>
+        <div class="mb-3">
+          <label class="form-label text-muted small">Password</label>
+          <input type="password" class="form-control" style="background: var(--bg-main); color: #fff; border-color: var(--border-custom);" placeholder="••••••••">
+        </div>
+        <button class="btn btn-neon-purple w-100">Sign In</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/cart.js"></script>
+<script src="assets/merch.js"></script>
+<script src="assets/characters.js"></script>
+<script src="assets/media.js"></script>
+<script src="assets/articles.js"></script>
+<script src="assets/events.js"></script>
+<script src="assets/hubs.js"></script>
+</body>
+</html>

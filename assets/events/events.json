@@ -1,0 +1,40 @@
+{
+  "events": [
+    {
+      "id": "anime",
+      "date": "OCT 15, 2026",
+      "dateFull": "October 15, 2026",
+      "title": "FandomVerse Anime Night",
+      "location": "Latifabad Unit No. 2, Hyderabad",
+      "description": "Join fellow anime fans for cosplay, discussions, games and exciting fandom activities.",
+      "modalDescription": "Join the FandomVerse community for a fun-filled Anime Night featuring cosplay, anime discussions, fan games, character activities and community interaction. Anime fans can enjoy an evening dedicated to Japanese animation and fandom culture.",
+      "category": "Anime",
+      "categoryIcon": "fa-solid fa-masks-theater",
+      "image": "anime.jpeg"
+    },
+    {
+      "id": "gaming",
+      "date": "NOV 02, 2026",
+      "dateFull": "November 02, 2026",
+      "title": "Gaming Arena Tournament",
+      "location": "Aptech Latifabad Branch",
+      "description": "Compete with fellow gamers in an exciting tournament featuring multiplayer challenges.",
+      "modalDescription": "Take part in the FandomVerse Gaming Arena Tournament and compete with fellow gamers in exciting multiplayer challenges. Bring your skills, enjoy the competition and connect with other members of the gaming community.",
+      "category": "Gaming",
+      "categoryIcon": "fa-solid fa-gamepad",
+      "image": "gaming-fandom.jpeg"
+    },
+    {
+      "id": "kpop",
+      "date": "DEC 10, 2026",
+      "dateFull": "December 10, 2026",
+      "title": "K-Pop & Media Festival",
+      "location": "Main Community Hall, Hyderabad",
+      "description": "Celebrate K-Pop, movies and fandom culture with music and interactive fan activities.",
+      "modalDescription": "Celebrate K-Pop, movies, TV shows and fandom culture at the FandomVerse Media Festival. Enjoy music, interactive fan activities, discussions and a community-focused entertainment experience.",
+      "category": "K-Pop & Media",
+      "categoryIcon": "fa-solid fa-music",
+      "image": "k.pop.jpeg"
+    }
+  ]
+}

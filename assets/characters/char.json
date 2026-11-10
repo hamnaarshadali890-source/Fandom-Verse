@@ -1,0 +1,298 @@
+{
+  "characters": [
+    {
+      "id": "c1",
+      "name": "Goku",
+      "category": "Anime",
+      "series": "Dragon Ball",
+      "image": "assets/characters/goku.png",
+      "shortDesc": "A Saiyan warrior who protects Earth and pushes his power beyond every limit.",
+      "bio": "Goku is a Saiyan raised on Earth who loves training, competition, and protecting the people around him.",
+      "traits": [
+        "Saiyan Warrior",
+        "Ultra Instinct",
+        "Martial Artist"
+      ]
+    },
+    {
+      "id": "c2",
+      "name": "Naruto Uzumaki",
+      "category": "Anime",
+      "series": "Naruto",
+      "image": "assets/characters/Naruto-Uzumaki.webp",
+      "shortDesc": "A young ninja who dreams of becoming the leader of his village.",
+      "bio": "Naruto grows from an overlooked young ninja into a respected shinobi through persistence, friendship, and hard work.",
+      "traits": [
+        "Ninja",
+        "Sage Mode",
+        "Determined"
+      ]
+    },
+    {
+      "id": "c3",
+      "name": "Monkey D. Luffy",
+      "category": "Anime",
+      "series": "One Piece",
+      "image": "assets/characters/Monkey-D-Luffy.jpg",
+      "shortDesc": "A cheerful pirate captain searching for the legendary One Piece.",
+      "bio": "Luffy is the captain of the Straw Hat Pirates and sets out to become the Pirate King with his crew.",
+      "traits": [
+        "Pirate Captain",
+        "Gear Fifth",
+        "Fearless"
+      ]
+    },
+    {
+      "id": "c4",
+      "name": "Kratos",
+      "category": "Gaming",
+      "series": "God of War",
+      "image": "assets/characters/Kratos.jpg",
+      "shortDesc": "A Spartan warrior facing gods and monsters across mythological worlds.",
+      "bio": "Kratos is a former Greek god who begins a new life in the Norse realms while protecting his son Atreus.",
+      "traits": [
+        "Spartan Rage",
+        "Leviathan Axe",
+        "Warrior"
+      ]
+    },
+    {
+      "id": "c5",
+      "name": "Lara Croft",
+      "category": "Gaming",
+      "series": "Tomb Raider",
+      "image": "assets/characters/Lara-Croft.jpg",
+      "shortDesc": "An adventurous archaeologist who explores dangerous ancient ruins.",
+      "bio": "Lara Croft is an archaeologist and explorer known for solving ancient mysteries and surviving extreme expeditions.",
+      "traits": [
+        "Archaeologist",
+        "Explorer",
+        "Survivor"
+      ]
+    },
+    {
+      "id": "c6",
+      "name": "Master Chief",
+      "category": "Gaming",
+      "series": "Halo",
+      "image": "assets/characters/Master-Chief.webp",
+      "shortDesc": "A legendary supersoldier defending humanity across the galaxy.",
+      "bio": "Master Chief Petty Officer John-117 is a Spartan supersoldier and one of humanity's most experienced defenders.",
+      "traits": [
+        "SPARTAN-II",
+        "Combat Specialist",
+        "UNSC"
+      ]
+    },
+    {
+      "id": "c7",
+      "name": "Harry Potter",
+      "category": "Movies",
+      "series": "Harry Potter",
+      "image": "assets/characters/Harry-Potter.jpg",
+      "shortDesc": "A young wizard whose story becomes one of the most famous in the wizarding world.",
+      "bio": "Harry Potter discovers that he is a wizard and attends Hogwarts, where he faces challenges tied to his past.",
+      "traits": [
+        "Wizard",
+        "Gryffindor",
+        "Parseltongue"
+      ]
+    },
+    {
+      "id": "c8",
+      "name": "Jack Sparrow",
+      "category": "Movies",
+      "series": "Pirates of the Caribbean",
+      "image": "assets/characters/Jack-Sparrow.jpg",
+      "shortDesc": "A clever pirate captain known for his unusual plans and luck.",
+      "bio": "Captain Jack Sparrow is a witty pirate whose adventures revolve around ships, treasure, freedom, and survival.",
+      "traits": [
+        "Pirate Captain",
+        "Swordsman",
+        "Clever"
+      ]
+    },
+    {
+      "id": "c9",
+      "name": "Neo",
+      "category": "Movies",
+      "series": "The Matrix",
+      "image": "assets/characters/neo.webp",
+      "shortDesc": "A hacker who discovers a hidden reality and chooses to fight for freedom.",
+      "bio": "Neo learns that the world he knows is an artificial reality and becomes a central figure in the fight against the machines.",
+      "traits": [
+        "The One",
+        "Hacker",
+        "Martial Arts"
+      ]
+    },
+    {
+      "id": "c10",
+      "name": "Wednesday Addams",
+      "category": "TV Shows",
+      "series": "Wednesday",
+      "image": "assets/characters/Wednesday-Addams.jpg",
+      "shortDesc": "A sharp, mysterious student with a talent for investigation.",
+      "bio": "Wednesday Addams attends Nevermore Academy and investigates strange events while navigating school life.",
+      "traits": [
+        "Detective",
+        "Psychic Visions",
+        "Deadpan"
+      ]
+    },
+    {
+      "id": "c11",
+      "name": "Eleven",
+      "category": "TV Shows",
+      "series": "Stranger Things",
+      "image": "assets/characters/Eleven.jpg",
+      "shortDesc": "A powerful young girl with abilities connected to a mysterious alternate world.",
+      "bio": "Eleven is a central character in Stranger Things whose supernatural abilities help her friends face threats from the Upside Down.",
+      "traits": [
+        "Telekinesis",
+        "Brave",
+        "Psychic Powers"
+      ]
+    },
+    {
+      "id": "c12",
+      "name": "Sherlock Holmes",
+      "category": "TV Shows",
+      "series": "Sherlock",
+      "image": "assets/characters/Sherlock-Holmes.jpg",
+      "shortDesc": "A brilliant consulting detective who solves difficult cases through observation.",
+      "bio": "Sherlock Holmes is a consulting detective famous for deduction, observation, and solving complex mysteries.",
+      "traits": [
+        "Deduction",
+        "Observation",
+        "Detective"
+      ]
+    },
+    {
+      "id": "c13",
+      "name": "Rumi",
+      "category": "K-Pop",
+      "series": "KPop Demon Hunters",
+      "image": "assets/characters/Rumi.webp",
+      "shortDesc": "A performer who balances the spotlight with a secret supernatural mission.",
+      "bio": "Rumi is a fictional pop star and demon hunter from KPop Demon Hunters, combining stage performance with heroic action.",
+      "traits": [
+        "Singer",
+        "Demon Hunter",
+        "Leader"
+      ]
+    },
+    {
+      "id": "c14",
+      "name": "Mira",
+      "category": "K-Pop",
+      "series": "KPop Demon Hunters",
+      "image": "assets/characters/Mira.jpg",
+      "shortDesc": "A stylish performer and member of a supernatural K-pop team.",
+      "bio": "Mira is one of the fictional members of the KPop Demon Hunters team, known for her performance skills and courage.",
+      "traits": [
+        "Performer",
+        "Fighter",
+        "Team Member"
+      ]
+    },
+    {
+      "id": "c15",
+      "name": "Zoey",
+      "category": "K-Pop",
+      "series": "KPop Demon Hunters",
+      "image": "assets/characters/Zoey.webp",
+      "shortDesc": "A young performer who brings energy and determination to the team.",
+      "bio": "Zoey is a fictional performer and demon hunter who works with her teammates to protect their world.",
+      "traits": [
+        "Performer",
+        "Energetic",
+        "Demon Hunter"
+      ]
+    },
+    {
+      "id": "c16",
+      "name": "Batman",
+      "category": "Comics",
+      "series": "DC Comics",
+      "image": "assets/characters/Batman.jpg",
+      "shortDesc": "A masked vigilante who protects Gotham using skill, strategy, and technology.",
+      "bio": "Batman is Bruce Wayne, a Gotham hero who relies on training, detective work, technology, and determination.",
+      "traits": [
+        "Detective",
+        "Martial Artist",
+        "Strategist"
+      ]
+    },
+    {
+      "id": "c17",
+      "name": "Spider-Man",
+      "category": "Comics",
+      "series": "Marvel Comics",
+      "image": "assets/characters/Spider-Man.webp",
+      "shortDesc": "A friendly neighborhood hero with spider-like abilities and quick reflexes.",
+      "bio": "Spider-Man is a superhero known for agility, web-swinging, wall-crawling, and the responsibility that comes with his powers.",
+      "traits": [
+        "Spider Powers",
+        "Web Shooter",
+        "Agile"
+      ]
+    },
+    {
+      "id": "c18",
+      "name": "Superman",
+      "category": "Comics",
+      "series": "DC Comics",
+      "image": "assets/characters/Superman.webp",
+      "shortDesc": "A powerful hero from Krypton who protects people on Earth.",
+      "bio": "Superman is Clark Kent, a Kryptonian raised on Earth who uses his abilities to help and protect others.",
+      "traits": [
+        "Flight",
+        "Super Strength",
+        "Kryptonian"
+      ]
+    },
+    {
+      "id": "c19",
+      "name": "Ichigo Kurosaki",
+      "category": "Manga",
+      "series": "Bleach",
+      "image": "assets/characters/Ichigo-Kurosaki.jpg",
+      "shortDesc": "A teenager who becomes a Soul Reaper and protects the living world.",
+      "bio": "Ichigo Kurosaki gains Soul Reaper powers and takes on the responsibility of protecting people from spiritual threats.",
+      "traits": [
+        "Soul Reaper",
+        "Zangetsu",
+        "Substitute Shinigami"
+      ]
+    },
+    {
+      "id": "c20",
+      "name": "Light Yagami",
+      "category": "Manga",
+      "series": "Death Note",
+      "image": "assets/characters/Light-Yagami.jpg",
+      "shortDesc": "A brilliant student whose life changes after discovering a supernatural notebook.",
+      "bio": "Light Yagami finds the Death Note and becomes involved in a high-stakes battle of strategy and identity.",
+      "traits": [
+        "Genius",
+        "Strategist",
+        "Death Note"
+      ]
+    },
+    {
+      "id": "c21",
+      "name": "Tanjiro Kamado",
+      "category": "Manga",
+      "series": "Demon Slayer",
+      "image": "assets/characters/Tanjiro-Kamado.webp",
+      "shortDesc": "A kind-hearted swordsman who fights demons to protect his sister.",
+      "bio": "Tanjiro joins the Demon Slayer Corps after tragedy strikes his family and trains to help his sister Nezuko.",
+      "traits": [
+        "Swordsman",
+        "Water Breathing",
+        "Compassionate"
+      ]
+    }
+  ]
+}

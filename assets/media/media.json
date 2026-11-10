@@ -1,0 +1,162 @@
+[
+  {
+    "id": "1",
+    "title": "Demon Slayer: Swordsmith Village Arc - Official Trailer",
+    "category": "Anime",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/a9tq0aS5Zu8",
+    "duration": "2:15",
+    "description": "Tanjiro travels to the Swordsmith Village to repair his sword.",
+    "thumbnail": "https://img.youtube.com/vi/a9tq0aS5Zu8/hqdefault.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Jujutsu Kaisen Season 2 - Official Main Trailer",
+    "category": "Anime",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/VRBh-2BxdzM?si=S-WVB3U3VMDokg5P",
+    "duration": "2:04",
+    "description": "Gojo and Geto's past unfolds alongside the Shibuya Incident.",
+    "thumbnail": "https://img.youtube.com/vi/VRBh-2BxdzM/maxresdefault.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Grand Theft Auto VI - Official Trailer 1",
+    "category": "Gaming",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/QdBZY2fkU-0",
+    "duration": "1:30",
+    "description": "Rockstar Games presents the first official trailer for GTA VI.",
+    "thumbnail": "https://img.youtube.com/vi/QdBZY2fkU-0/hqdefault.jpg"
+  },
+  {
+    "id": "4",
+    "title": "The Legend of Zelda: Tears of the Kingdom - Official Trailer 3",
+    "category": "Gaming",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/uHGShqcAHlQ",
+    "duration": "3:54",
+    "description": "Explore the massive land and skies of Hyrule in this epic journey.",
+    "thumbnail": "https://img.youtube.com/vi/uHGShqcAHlQ/hqdefault.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Deadpool & Wolverine - Official Teaser",
+    "category": "Movies",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/uJMCNJP2ipI?si=-qYIvd8iMSV2aljF",
+    "duration": "2:25",
+    "description": "Marvel Studios presents the ultimate team-up.",
+    "thumbnail": "https://img.youtube.com/vi/uJMCNJP2ipI/maxresdefault.jpg"
+  },
+  {
+    "id": "6",
+    "title": "Dune: Part Two - Official Trailer 2",
+    "category": "Movies",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/Way9Dexny3w",
+    "duration": "3:02",
+    "description": "Paul Atreides unites with Chani and the Fremen while seeking revenge.",
+    "thumbnail": "https://img.youtube.com/vi/Way9Dexny3w/hqdefault.jpg"
+  },
+  {
+    "id": "7",
+    "title": "Stranger Things 4 - Official Trailer",
+    "category": "TV Shows",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/mVsJXiI60a0?si=jRoFKlxJ5TFcdO2W",
+    "duration": "3:08",
+    "description": "Official Trailer for Stranger Things Season 4 on Netflix.",
+    "thumbnail": "https://img.youtube.com/vi/mVsJXiI60a0/maxresdefault.jpg"
+  },
+  {
+    "id": "8",
+    "title": "The Last of Us - Official Teaser | HBO Max",
+    "category": "TV Shows",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/uLtkt8BonwM",
+    "duration": "1:38",
+    "description": "Joel and Ellie navigate a post-apocalyptic world in HBO's adaptation.",
+    "thumbnail": "https://img.youtube.com/vi/uLtkt8BonwM/hqdefault.jpg"
+  },
+  {
+    "id": "9",
+    "title": "Stray Kids - 'God\u2019s Menu'",
+    "category": "K-Pop",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/TQTlCHxyuu8?si=6q9f1S9Eiwl7rKbw&amp;start=4",
+    "duration": "3:13",
+    "description": "Official Music Video for Pink Venom by BLACKPINK.",
+    "thumbnail": "https://img.youtube.com/vi/TQTlCHxyuu8/maxresdefault.jpg"
+  },
+  {
+    "id": "10",
+    "title": "BTS - 'Dynamite' Official MV",
+    "category": "K-Pop",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/J8fQMq4T8Yg?si=8k6xlPlBDy7yKC5Z&amp;start=4",
+    "duration": "3:43",
+    "description": "Official Music Video for Dynamite by BTS.",
+    "thumbnail": "https://img.youtube.com/vi/J8fQMq4T8Yg/maxresdefault.jpg"
+  },
+  {
+    "id": "11",
+    "title": "Spider-Man: Across the Spider-Verse - Trailer",
+    "category": "Comics",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/cqGjhVJWtEg",
+    "duration": "2:21",
+    "description": "Miles Morales catapults across the Multiverse.",
+    "thumbnail": "https://img.youtube.com/vi/cqGjhVJWtEg/hqdefault.jpg"
+  },
+  {
+    "id": "12",
+    "title": "X-Men '97 - Official Trailer | Disney+",
+    "category": "Comics",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/pv3Ss8o9gGQ",
+    "duration": "1:48",
+    "description": "The classic 90s animated X-Men return in this brand new series.",
+    "thumbnail": "https://img.youtube.com/vi/pv3Ss8o9gGQ/hqdefault.jpg"
+  },
+  {
+    "id": "13",
+    "title": "Chainsaw Man - Official Main Trailer",
+    "category": "Manga",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/v4yLeNt-kCU",
+    "duration": "1:38",
+    "description": "Official Trailer for Chainsaw Man Manga and Anime adaptation.",
+    "thumbnail": "https://img.youtube.com/vi/v4yLeNt-kCU/hqdefault.jpg"
+  },
+  {
+    "id": "14",
+    "title": "Attack on Titan Final Season - Official Trailer",
+    "category": "Manga",
+    "type": "trailers",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/MW8TEMC6jS8?si=03tGXBE3cm7meUBr&amp;start=5",
+    "duration": "2:18",
+    "description": "The epic conclusion based on Hajime Isayama's hit manga.",
+    "thumbnail": "https://img.youtube.com/vi/MW8TEMC6jS8/maxresdefault.jpg"
+  },
+  {
+    "id": "15",
+    "title": "Cosplay & Fan Art Showcase Clip",
+    "category": "Anime",
+    "type": "fan-content",
+    "youtubeEmbedUrl": "https://www.youtube.com/embed/ORcHXcg076w?si=cOD44hfqJHfA_dsg",
+    "duration": "0:45",
+    "description": "Short community showcase of top anime cosplay and fan creations.",
+    "thumbnail": "https://img.youtube.com/vi/ORcHXcg076w/maxresdefault.jpg"
+  },
+  {
+    "id": "16",
+    "title": "Anime & Fandom Culture Discussion Podcast",
+    "category": "Anime",
+    "type": "podcasts",
+    "audioUrl": "assets/media/audio/anime_podcast.mp3",
+    "duration": "10:15",
+    "description": "Full audio podcast episode discussing trending pop culture and manga releases.",
+    "thumbnail": "https://img.youtube.com/vi/LLIGo5zHoLk/hqdefault.jpg"
+  }
+]

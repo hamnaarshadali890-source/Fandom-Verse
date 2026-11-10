@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "Nebula Hoodie",
+    "price": 48.0,
+    "img": "assets/merch/img1.jpeg",
+    "rating": 4.8,
+    "stars": "\u2605\u2605\u2605\u2605\u2605",
+    "sold": 212,
+    "featured": true,
+    "category": "Other"
+  },
+  {
+    "id": 2,
+    "name": "Aether walkers",
+    "price": 14.5,
+    "img": "assets/merch/img4.jpeg",
+    "rating": 4.3,
+    "stars": "\u2605\u2605\u2605\u2605\u2606",
+    "sold": 87,
+    "featured": true,
+    "category": "Other"
+  },
+  {
+    "id": 3,
+    "name": "Portal Mug",
+    "price": 19.0,
+    "img": "assets/merch/img2.jpeg",
+    "rating": 4.9,
+    "stars": "\u2605\u2605\u2605\u2605\u2605",
+    "sold": 356,
+    "featured": true,
+    "category": "Other"
+  },
+  {
+    "id": 4,
+    "name": "Aether key fob",
+    "price": 8.75,
+    "img": "assets/merch/img3.jpeg",
+    "rating": 3.7,
+    "stars": "\u2605\u2605\u2605\u2606\u2606",
+    "sold": 41,
+    "featured": true,
+    "category": "Other"
+  },
+  {
+    "id": 5,
+    "name": "Void walkers",
+    "price": 22.0,
+    "img": "assets/merch/img5.jpeg",
+    "rating": 4.7,
+    "stars": "\u2605\u2605\u2605\u2605\u2605",
+    "sold": 184,
+    "featured": false,
+    "category": "Other"
+  },
+  {
+    "id": 6,
+    "name": "Stellar Runner Shoes",
+    "price": 64.0,
+    "img": "assets/merch/img10.jpeg",
+    "rating": 4.4,
+    "stars": "\u2605\u2605\u2605\u2605\u2606",
+    "sold": 129,
+    "featured": false,
+    "category": "Other"
+  },
+  {
+    "id": 7,
+    "name": "Aether Steel Bottle",
+    "price": 24.5,
+    "img": "assets/merch/img9.jpeg",
+    "rating": 4.9,
+    "stars": "\u2605\u2605\u2605\u2605\u2605",
+    "sold": 301,
+    "featured": false,
+    "category": "Other"
+  },
+  {
+    "id": 8,
+    "name": "Crown Pen Set",
+    "price": 52.0,
+    "img": "assets/merch/img11.jpeg",
+    "rating": 4.8,
+    "stars": "\u2605\u2605\u2605\u2605\u2605",
+    "sold": 212,
+    "featured": false,
+    "category": "Other"
+  },
+  {
+    "id": 9,
+    "name": "Cosmic Comfort Slippers",
+    "price": 16.0,
+    "img": "assets/merch/img8.jpeg",
+    "rating": 4.2,
+    "stars": "\u2605\u2605\u2605\u2605\u2606",
+    "sold": 76,
+    "featured": false,
+    "category": "Other"
+  },
+  {
+    "id": 10,
+    "name": "BTS Sneakers",
+    "price": 39.0,
+    "img": "assets/merch/img10.jpeg",
+    "rating": 4.6,
+    "stars": "\u2605\u2605\u2605\u2605\u2605",
+    "sold": 158,
+    "featured": false,
+    "category": "Other"
+  },
+  {
+    "id": 11,
+    "name": "FandomVerse Sweat Shirt",
+    "price": 35.0,
+    "img": "assets/merch/img12.jpeg",
+    "rating": 4.8,
+    "stars": "\u2605\u2605\u2605\u2605\u2605",
+    "sold": 134,
+    "featured": false,
+    "category": "T-Shirt"
+  },
+  {
+    "id": 12,
+    "name": "Naruto Sneakers",
+    "price": 29.0,
+    "img": "assets/merch/img13.jpeg",
+    "rating": 3.9,
+    "stars": "\u2605\u2605\u2605\u2605\u2605",
+    "sold": 220,
+    "featured": false,
+    "category": "Sweatshirt"
+  }
+]
